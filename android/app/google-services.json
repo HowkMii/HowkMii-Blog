@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "633824728689",
+    "firebase_url": "https://howkmii-blog.firebaseio.com",
+    "project_id": "howkmii-blog",
+    "storage_bucket": "howkmii-blog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633824728689:android:2738182e8667afefe0add0",
+        "android_client_info": {
+          "package_name": "com.example.The_blog_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633824728689-gvmekad4al9oskm4qhkcc8dpbb3kbmh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXJY_vM8FD-3CUqz7UZydVCA3ct1yP_nE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633824728689-gvmekad4al9oskm4qhkcc8dpbb3kbmh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
