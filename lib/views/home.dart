@@ -33,16 +33,21 @@ class _HomePageState extends State<HomePage> {
 
       ),
       body: Container(),
-      floatingActionButton: Row(children: <Widget>[
+      floatingActionButton: Container(
+        padding: EdgeInsets.symmetric(vertical: 20),
+        child: Row(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+
           FloatingActionButton(
-            child: Icon(Icons.add_a_photo),
+            onPressed: (){},
+            child: Icon(Icons.add),
 
           )
-
-
-
-        ],),
-      
+        ],
+        ), 
+    ),
     );
   }
 }
