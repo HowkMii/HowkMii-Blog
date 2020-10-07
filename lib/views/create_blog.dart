@@ -7,7 +7,31 @@ class CreateBlog extends StatefulWidget {
 class _CreateBlogState extends State<CreateBlog> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+       appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:<Widget>[
+            Text("HowkMii",style:
+              TextStyle(
+                fontSize: 22
+
+              ),
+            ),
+            Text("Blog",style:
+              TextStyle(
+                fontSize: 22,
+                color: Colors.blue
+
+              ),
+            )
+          ],
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        
+
+      ),
       
     );
   }
