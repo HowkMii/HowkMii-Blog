@@ -37,6 +37,9 @@ class _CreateBlogState extends State<CreateBlog> {
         
 
       ),
+      body: Container(child: Column(children: <Widget>[
+        SizedBox(height: 10,)
+      ],),),
       
     );
   }
