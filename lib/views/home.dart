@@ -1,3 +1,4 @@
+import 'package:The_blog_app/views/create_blog.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   @override
@@ -41,7 +42,9 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
 
           FloatingActionButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBlog() ));
+            },
             child: Icon(Icons.add),
 
           )
