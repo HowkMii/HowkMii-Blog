@@ -8,7 +8,7 @@ class _CreateBlogState extends State<CreateBlog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
+      appBar:  AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children:<Widget>[
@@ -29,6 +29,11 @@ class _CreateBlogState extends State<CreateBlog> {
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
+        actions: <Widget>[
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Icon(Icons.file_upload))
+        ],
         
 
       ),
