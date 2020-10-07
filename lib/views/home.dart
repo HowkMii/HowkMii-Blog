@@ -28,9 +28,20 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         backgroundColor: Colors.transparent,
-        floatingActionButton: Row()
+        elevation: 0.0,
+        
 
       ),
+      body: Container(),
+      floatingActionButton: Row(children: <Widget>[
+          FloatingActionButton(
+            child: Icon(Icons.add_a_photo),
+
+          )
+
+
+
+        ],),
       
     );
   }
