@@ -42,7 +42,7 @@ class _CreateBlogState extends State<CreateBlog> {
         margin: EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: <Widget>[
-        SizedBox(height: 10,),
+        SizedBox(height: 60,),
         Container(
           height: 100, 
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15)),
@@ -51,8 +51,29 @@ class _CreateBlogState extends State<CreateBlog> {
         
         ),
 
-        SizedBox(height: 8,),
-        TextField()
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 25),
+          child: Column(children: <Widget>[
+          SizedBox(height: 50,),
+          TextField(
+          decoration: InputDecoration(hintText: "Author"),
+          onChanged: (val){
+            username =val;
+          },
+        ),
+        TextField(
+          decoration: InputDecoration(hintText: "Title"),
+          onChanged: (val){
+            title =val;
+          },
+        ),
+        TextField(
+          decoration: InputDecoration(hintText: "Content"),
+          onChanged: (val){
+            content =val;
+          },
+        ),
+        ],),)
 
 
       ],),),
