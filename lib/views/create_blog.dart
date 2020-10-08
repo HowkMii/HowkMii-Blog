@@ -5,6 +5,7 @@ class CreateBlog extends StatefulWidget {
 }
 
 class _CreateBlogState extends State<CreateBlog> {
+  String username, title, content;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +49,11 @@ class _CreateBlogState extends State<CreateBlog> {
           width: MediaQuery.of(context).size.width,
         child: Icon(Icons.add_a_photo, color: Colors.black54, ),
         
-        )
+        ),
+
+        SizedBox(height: 8,),
+        TextField()
+
 
       ],),),
       
