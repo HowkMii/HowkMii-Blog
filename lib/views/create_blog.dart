@@ -42,10 +42,10 @@ class _CreateBlogState extends State<CreateBlog> {
           children: <Widget>[
         SizedBox(height: 10,),
         Container(
-          height: 150, 
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(6)),
+          height: 100, 
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15)),
           width: MediaQuery.of(context).size.width,
-        child: Icon(Icons.add_a_photo ),
+        child: Icon(Icons.add_a_photo, color: Colors.black54, ),
         
         )
 
