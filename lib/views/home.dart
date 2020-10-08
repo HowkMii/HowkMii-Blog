@@ -2,14 +2,17 @@ import 'package:The_blog_app/views/create_blog.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   @override
+ 
   _HomePageState createState() => _HomePageState();
 }
+
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    
     var container = Container(
-        padding: EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.only(left: 35.0),
         
         child: Row(
         
@@ -27,6 +30,7 @@ class _HomePageState extends State<HomePage> {
         ), 
     );
     return Scaffold(
+      
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +57,8 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(),
       floatingActionButton: container,
+      
     );
+    
   }
 }
