@@ -38,6 +38,7 @@ class _CreateBlogState extends State<CreateBlog> {
 
       ),
       body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: <Widget>[
         SizedBox(height: 10,),
