@@ -37,8 +37,18 @@ class _CreateBlogState extends State<CreateBlog> {
         
 
       ),
-      body: Container(child: Column(children: <Widget>[
-        SizedBox(height: 10,)
+      body: Container(
+        child: Column(
+          children: <Widget>[
+        SizedBox(height: 10,),
+        Container(
+          height: 150, 
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(6)),
+          width: MediaQuery.of(context).size.width,
+        child: Icon(Icons.add_a_photo ),
+        
+        )
+
       ],),),
       
     );

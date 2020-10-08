@@ -8,6 +8,24 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    var container = Container(
+        padding: EdgeInsets.symmetric(vertical: 20),
+        
+        child: Row(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+
+          FloatingActionButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBlog() ));
+            },
+            child: Icon(Icons.add),
+
+          )
+        ],
+        ), 
+    );
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -34,23 +52,7 @@ class _HomePageState extends State<HomePage> {
 
       ),
       body: Container(),
-      floatingActionButton: Container(
-        padding: EdgeInsets.symmetric(vertical: 20),
-        child: Row(
-        
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-
-          FloatingActionButton(
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBlog() ));
-            },
-            child: Icon(Icons.add),
-
-          )
-        ],
-        ), 
-    ),
+      floatingActionButton: container,
     );
   }
 }
