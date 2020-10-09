@@ -2,6 +2,7 @@ import 'package:The_blog_app/views/create_blog.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   @override
+  
  
   _HomePageState createState() => _HomePageState();
 }
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    
     
     var container = Container(
         padding: const EdgeInsets.only(left: 35.0),
@@ -31,7 +33,8 @@ class _HomePageState extends State<HomePage> {
         ), 
     );
     return Scaffold(
-      backgroundColor: Colors.white,
+      
+      backgroundColor: Color(0xFF52575d),
       
       appBar: AppBar(
         title: Row(
@@ -40,14 +43,14 @@ class _HomePageState extends State<HomePage> {
             Text("HowkMii ",style:
               TextStyle(
                 fontSize: 22,
-                color: Colors.black
+                color: Color(0xFFfddb3a)
 
               ),
             ),
             Text("Blog",style:
               TextStyle(
-                fontSize: 22,
-                color: Colors.black45
+                 fontSize: 22,
+                color: Colors.white
 
               ),
             )

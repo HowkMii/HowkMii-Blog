@@ -9,7 +9,8 @@ class _CreateBlogState extends State<CreateBlog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      resizeToAvoidBottomPadding: false ,
+      backgroundColor: Color(0xFF52575d),
       appBar:  AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,25 +18,25 @@ class _CreateBlogState extends State<CreateBlog> {
             Text("HowkMii ",style:
               TextStyle(
                 fontSize: 22,
-                color: Colors.black
+                color: Color(0xFFfddb3a)
 
               ),
             ),
             Text("Blog",style:
               TextStyle(
                 fontSize: 22,
-                color: Colors.black45
+                color: Colors.white
 
               ),
             )
           ],
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF52575d),
         elevation: 0.0,
         actions: <Widget>[
           Container(
             padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(Icons.file_upload, color: Colors.black45,))
+            child: Icon(Icons.file_upload, color: Colors.white,))
         ],
         
 
@@ -44,10 +45,10 @@ class _CreateBlogState extends State<CreateBlog> {
         margin: EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: <Widget>[
-        SizedBox(height: 60,),
+        SizedBox(height: 80,),
         Container(
           height: 100, 
-          decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(15),border: Border.all(),),
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15),border: Border.all(),),
           width: MediaQuery.of(context).size.width,
 
         child: Icon(Icons.add_a_photo, color: Colors.blueGrey, ),
@@ -55,19 +56,28 @@ class _CreateBlogState extends State<CreateBlog> {
         ),
 
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 25),
+          margin: EdgeInsets.symmetric(horizontal: 20),
+
+          
           child: Column(children: <Widget>[
           
-          SizedBox(height: 50,),
+          SizedBox(height: 40,),
           TextField(
           decoration: InputDecoration(
             hintText: "Author",
+            hintStyle:
+              TextStyle(
+                fontSize: 16,
+                color: Color(0xFFf6f4e6),
+              ),
+
+  
+            
             border: new OutlineInputBorder(
-                            borderSide: new BorderSide(
-                              color: Colors.black,
-                            ),
+                            
                             borderRadius: BorderRadius.circular(20)
                           ),
+                          
             
             ),
           
@@ -76,26 +86,42 @@ class _CreateBlogState extends State<CreateBlog> {
           onChanged: (val){
             username =val;
             
+            
           },
         ),
+        SizedBox(height: 20,),
         TextField(
+          
           
           decoration: InputDecoration(
             hintText: "Title",
+            hintStyle:
+              TextStyle(
+                fontSize: 16,
+                color: Color(0xFFf6f4e6),
+              ),
+  
             border: new OutlineInputBorder(
                             
                             borderRadius: BorderRadius.circular(20)
                           ),
-            
+ 
             ),
           
           onChanged: (val){
             title =val;
           },
         ),
+        SizedBox(height: 20,),
         TextField(
           decoration: InputDecoration(
             hintText: "Content",
+            hintStyle:
+              TextStyle(
+                fontSize: 16,
+                color: Color(0xFFf6f4e6),
+              ),
+  
             border: new OutlineInputBorder(
                             
                             borderRadius: BorderRadius.circular(20)
@@ -105,6 +131,22 @@ class _CreateBlogState extends State<CreateBlog> {
             content =val;
           },
         ),
+        SizedBox(height: 90,),
+        Text(" From HowkMii ",style:
+              TextStyle(
+                fontSize: 14,
+                color: Color(0xFFfddb3a)
+
+              ),
+            ),
+        SizedBox(height: 10,),
+        Text(" Contact ",style:
+          TextStyle(
+                fontSize: 14,
+                color: Color(0xFFf6f4e6)
+
+          ),
+            ),
         ],),)
 
 
