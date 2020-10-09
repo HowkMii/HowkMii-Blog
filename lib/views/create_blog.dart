@@ -60,20 +60,49 @@ class _CreateBlogState extends State<CreateBlog> {
           
           SizedBox(height: 50,),
           TextField(
-          decoration: InputDecoration(hintText: "Author",),
+          decoration: InputDecoration(
+            hintText: "Author",
+            border: new OutlineInputBorder(
+                            borderSide: new BorderSide(
+                              color: Colors.black,
+                            ),
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+            
+            ),
+          
+          
+          
           onChanged: (val){
             username =val;
             
           },
         ),
         TextField(
-          decoration: InputDecoration(hintText: "Title"),
+          
+          decoration: InputDecoration(
+            hintText: "Title",
+            border: new OutlineInputBorder(
+                            borderSide: new BorderSide(
+                              color: Colors.black,
+                            ),
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+            
+            ),
+          
           onChanged: (val){
             title =val;
           },
         ),
         TextField(
-          decoration: InputDecoration(hintText: "Content"),
+          decoration: InputDecoration(
+            hintText: "Content",
+            border: new OutlineInputBorder(
+                            
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+            ),
           onChanged: (val){
             content =val;
           },
