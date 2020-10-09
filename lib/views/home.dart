@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBlog() ));
             },
             child: Icon(Icons.add),
-            backgroundColor: Colors.blueGrey
+            backgroundColor: Colors.white70
 
           )
         ],
