@@ -9,20 +9,22 @@ class _CreateBlogState extends State<CreateBlog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar:  AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children:<Widget>[
-            Text("HowkMii",style:
+            Text("HowkMii ",style:
               TextStyle(
-                fontSize: 22
+                fontSize: 22,
+                color: Colors.black
 
               ),
             ),
             Text("Blog",style:
               TextStyle(
                 fontSize: 22,
-                color: Colors.blue
+                color: Colors.black45
 
               ),
             )
@@ -47,7 +49,7 @@ class _CreateBlogState extends State<CreateBlog> {
           height: 100, 
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15)),
           width: MediaQuery.of(context).size.width,
-        child: Icon(Icons.add_a_photo, color: Colors.black54, ),
+        child: Icon(Icons.add_a_photo, color: Colors.blueGrey, ),
         
         ),
 

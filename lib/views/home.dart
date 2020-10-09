@@ -24,27 +24,30 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBlog() ));
             },
             child: Icon(Icons.add),
+            backgroundColor: Colors.blueGrey
 
           )
         ],
         ), 
     );
     return Scaffold(
+      backgroundColor: Colors.white,
       
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children:<Widget>[
-            Text("HowkMii",style:
+            Text("HowkMii ",style:
               TextStyle(
-                fontSize: 22
+                fontSize: 22,
+                color: Colors.black
 
               ),
             ),
             Text("Blog",style:
               TextStyle(
                 fontSize: 22,
-                color: Colors.blue
+                color: Colors.black45
 
               ),
             )
