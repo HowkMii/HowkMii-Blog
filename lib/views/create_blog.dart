@@ -61,7 +61,7 @@ class _CreateBlogState extends State<CreateBlog> {
           
           child: Column(children: <Widget>[
           
-          SizedBox(height: 40,),
+          SizedBox(height: 60,),
           TextField(
           decoration: InputDecoration(
             hintText: "Author",
@@ -70,15 +70,8 @@ class _CreateBlogState extends State<CreateBlog> {
                 fontSize: 16,
                 color: Color(0xFFf6f4e6),
               ),
+              
 
-  
-            
-            border: new OutlineInputBorder(
-                            
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          
-            
             ),
           
           
@@ -101,10 +94,7 @@ class _CreateBlogState extends State<CreateBlog> {
                 color: Color(0xFFf6f4e6),
               ),
   
-            border: new OutlineInputBorder(
-                            
-                            borderRadius: BorderRadius.circular(20)
-                          ),
+          
  
             ),
           
@@ -122,10 +112,7 @@ class _CreateBlogState extends State<CreateBlog> {
                 color: Color(0xFFf6f4e6),
               ),
   
-            border: new OutlineInputBorder(
-                            
-                            borderRadius: BorderRadius.circular(20)
-                          ),
+            
             ),
           onChanged: (val){
             content =val;
