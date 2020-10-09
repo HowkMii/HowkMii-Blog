@@ -83,9 +83,7 @@ class _CreateBlogState extends State<CreateBlog> {
           decoration: InputDecoration(
             hintText: "Title",
             border: new OutlineInputBorder(
-                            borderSide: new BorderSide(
-                              color: Colors.black,
-                            ),
+                            
                             borderRadius: BorderRadius.circular(20)
                           ),
             
