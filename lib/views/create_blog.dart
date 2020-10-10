@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:The_blog_app/services/crud.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:random_string/random_string.dart';
 class CreateBlog extends StatefulWidget {
   @override
   _CreateBlogState createState() => _CreateBlogState();
@@ -12,8 +14,12 @@ class _CreateBlogState extends State<CreateBlog> {
   String username, title, content;
   File selectedImage;
  
+ 
+  
+  bool _isLoading = false;
   CrudMethods crudMethods = new CrudMethods();
-    Future getImage() async {
+
+  Future getImage() async {
     var image = await ImagePicker.pickImage(source: ImageSource.gallery);
 
     setState(() {
@@ -21,6 +27,34 @@ class _CreateBlogState extends State<CreateBlog> {
     });
   }
 
+  uploadBlog() async {
+    if (selectedImage != null) {
+      setState(() {
+        _isLoading = true;
+      });
+
+      /// uploading image to firebase storage
+      StorageReference firebaseStorageRef = FirebaseStorage.instance
+          .ref()
+          .child("blogImages")
+          .child("${randomAlphaNumeric(9)}.jpg");
+
+      final StorageUploadTask task = firebaseStorageRef.putFile(selectedImage);
+
+      var downloadUrl = await (await task.onComplete).ref.getDownloadURL();
+      print("this is url $downloadUrl");
+
+      Map<String, String> blogMap = {
+        "imgUrl": downloadUrl,
+        "username": username,
+        "title": title,
+        "content": content
+      };
+      crudMethods.addData(blogMap).then((result) {
+        Navigator.pop(context);
+      });
+    } else {}
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -70,7 +104,10 @@ class _CreateBlogState extends State<CreateBlog> {
           child: selectedImage != null ? Container(
             height: 100,
             width: MediaQuery.of(context).size.width,
-            child: Image.file(selectedImage),)
+            child: ClipRRect( borderRadius: BorderRadius.circular(15), child: Image.file(selectedImage, fit: BoxFit.cover,)),
+            
+            
+            )
           : Container(
           height: 100, 
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15),border: Border.all(),),
