@@ -67,7 +67,10 @@ class _CreateBlogState extends State<CreateBlog> {
           onTap: (){
             getImage();
           },
-          child: selectedImage != null ? Container(child: Image.file(selectedImage),)
+          child: selectedImage != null ? Container(
+            height: 100,
+            width: MediaQuery.of(context).size.width,
+            child: Image.file(selectedImage),)
           : Container(
           height: 100, 
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15),border: Border.all(),),
