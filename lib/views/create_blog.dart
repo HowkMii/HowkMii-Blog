@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:The_blog_app/services/crud.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 class CreateBlog extends StatefulWidget {
   @override
   _CreateBlogState createState() => _CreateBlogState();
@@ -7,8 +10,16 @@ class CreateBlog extends StatefulWidget {
 
 class _CreateBlogState extends State<CreateBlog> {
   String username, title, content;
+  File selectedImage;
  
   CrudMethods crudMethods = new CrudMethods();
+    Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      selectedImage = image;
+    });
+  }
 
   
   @override
@@ -51,13 +62,18 @@ class _CreateBlogState extends State<CreateBlog> {
         child: Column(
           children: <Widget>[
         SizedBox(height: 80,),
-        Container(
+
+        GestureDetector(
+          onTap: (){
+            getImage();
+          },
+          child: Container(
           height: 100, 
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15),border: Border.all(),),
           width: MediaQuery.of(context).size.width,
 
         child: Icon(Icons.add_a_photo, color: Colors.blueGrey, ),
-        
+          ),
         ),
 
         Container(
