@@ -1,3 +1,4 @@
+import 'package:The_blog_app/services/crud.dart';
 import 'package:flutter/material.dart';
 class CreateBlog extends StatefulWidget {
   @override
@@ -6,6 +7,10 @@ class CreateBlog extends StatefulWidget {
 
 class _CreateBlogState extends State<CreateBlog> {
   String username, title, content;
+ 
+  CrudMethods crudMethods = new CrudMethods();
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
